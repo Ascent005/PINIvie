@@ -51,28 +51,49 @@ nav ul li a {
     font-weight: bold;
 }
 .hero {
-    background-image: url('');
+    background-image: url('./back.png');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     color: black;
     text-align: center;
     padding: 100px 20px;
+    height: 100vh;
+    width: 100vw;
+}
+.page-accueil {
+    height: 85%;
+    align-items: center;
+    justify-content: center;
 }
 .hero h1 {
     font-size: 3em;
     margin: 0;
+    color: white;
+    font-weight: bold;
+    width: 100vw;
+    padding: 10px 5px;
+    text-align: center;
+    align-items: center;
+
 }
 .hero p {
     font-size: 1.2em;
     margin: 20px 0;
+    margin-bottom: 200px;
+    color: #FF9800;
+    font-style: italic;
+    color: black;
+    text-align: center;
 }
-.btn {
+.hero .btn {
     background-color: #FF9800;
     color: white;
     padding: 15px 30px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
+    margin-bottom: 100px;
 }
 .presentation, .fonctionnalites {
     padding: 50px 20px;

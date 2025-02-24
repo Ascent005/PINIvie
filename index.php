@@ -35,9 +35,13 @@
         <?php endif; ?>
 
         <section class="hero">
-            <h1>Bienvenue sur le Marché Animalier</h1>
-            <p>Le premier marché en ligne dédié aux éleveurs et aux passionnés d’animaux. Trouvez, achetez et vendez en toute simplicité.</p>
-            <a href="inscription.php" class="btn">Rejoindre maintenant</a>
+            <div class="page-accueil">
+                <h1>Bienvenue sur le Marché Animalier</h1>
+                <p>Le premier marché en ligne dédié aux éleveurs et aux passionnés d’animaux. Trouvez, achetez et vendez en toute simplicité.</p>
+                <a href="inscription.php" class="btn">Rejoindre maintenant</a>
+            </div>
+            
+
         </section>
 
         <section class="presentation">
