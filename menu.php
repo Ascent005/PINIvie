@@ -3,7 +3,20 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 ?>
-<nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+    <nav>
+        <a href="#" class="logo"> 
+           <h2>NINIvie</h2>
+        </a>
     <ul>
         <li><a href="index.php">Accueil</a></li>
         <?php if (!isset($_SESSION['user_id'])): ?>
@@ -27,3 +40,8 @@ if (session_status() === PHP_SESSION_NONE) {
         <?php endif; ?>
     </ul>
 </nav>
+
+    </header>
+</body>
+</html>
+

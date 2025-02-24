@@ -7,107 +7,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Accueil - Marché Animalier</title>
-    
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #4CAF50;
-            padding: 10px 0;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            text-align: center;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .hero {
-            background-image: url('');
-            background-size: cover;
-            background-position: center;
-            color: black;
-            text-align: center;
-            padding: 100px 20px;
-        }
-        .hero h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-        .hero p {
-            font-size: 1.2em;
-            margin: 20px 0;
-        }
-        .btn {
-            background-color: #FF9800;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-        .presentation, .fonctionnalites {
-            padding: 50px 20px;
-            text-align: center;
-        }
-        .presentation img, .fonctionnalites img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        .grid {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-        .feature {
-            flex: 1;
-            margin: 20px;
-            min-width: 250px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-        }
-    </style>
 
  
 </head>
 <body>
 
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.php">Accueil</a></li>
-                <?php if (!isset($_SESSION['user_id'])): ?>
-                    <li><a href="connexion.php">Se connecter</a></li>
-                    <li><a href="inscription.php">S'inscrire</a></li>
-                <?php else: ?>
-                    <li><a href="dashboard.php">Mon Tableau de Bord</a></li>
-                    <li><a href="deconnexion.php">Déconnexion</a></li>
-                <?php endif; ?>
-                <li><a href="animaux.php">Animaux disponibles</a></li>
-            </ul>
-        </nav>
+        <?php include 'menu.php'?>
     </header>
 
     <main>
   
         
         <?php if (isset($_SESSION['user_id'])): ?>
-            <p>Bienvenue, <?= htmlspecialchars($_SESSION['nom']) ?> (<?= htmlspecialchars($_SESSION['type_utilisateur']) ?>) !</p>
+            <p>Bienvenue, <b> <?= htmlspecialchars($_SESSION['nom']) ?> </b> <!--(<?= htmlspecialchars($_SESSION['type_utilisateur'])  ?>)--> !</p>
             <p>Type d'utilisateur : <?= htmlspecialchars($_SESSION['type_utilisateur']) ?></p>
             <!-- Affichage de l'interface spécifique à chaque type d'utilisateur -->
             <?php if ($_SESSION['type_utilisateur'] == 'eleveur'): ?>

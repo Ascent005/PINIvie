@@ -52,6 +52,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <?php include 'menu.php' ; ?>
+    </header>
     <h2>Bienvenue dans le Tableau de Bord</h2>
     
     <?php if ($type_utilisateur == 'admin_principal'): ?>

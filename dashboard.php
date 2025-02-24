@@ -1,7 +1,7 @@
 <?php
 session_start();
 require 'config.php';
-include 'menu.php';
+
 
 if (!isset($_SESSION['user_id'])) {
     header("Location: connexion.php");
@@ -39,9 +39,14 @@ $elevages = $stmt->fetchAll();
 </head>
 <body>
     <header>
-        <h1>Bienvenue sur votre Dashboard </h1>
-        <span class="badge">Type : Éleveur</span> <!-- Affichage du type d'utilisateur -->
+        <?php include 'menu.php'; ?>
+        
     </header>
+    
+    <div>
+    <h1>Bienvenue sur votre Dashboard </h1>
+    <span class="badge">Type : Éleveur</span> <!-- Affichage du type d'utilisateur -->
+    </div>
 
     <section>
         <h2>Vos Élevages</h2>

@@ -1,6 +1,6 @@
 <?php
     
-    include 'menu.php';
+  
     require 'config.php';
 
     $message = "";
@@ -49,22 +49,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Inscription</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2>Inscription</h2>
-    <form method="post">
-        <input type="text" name="nom" placeholder="Nom complet" required><br>
-        <input type="email" name="email" placeholder="Email" required><br>
-        <input type="text" name="telephone" placeholder="Téléphone" required><br>
-        <input type="text" name="adresse" placeholder="Adresse" required><br>
-        <input type="password" name="mot_de_passe" placeholder="Mot de passe" required><br>
-        <select name="type_utilisateur">
-            <option value="eleveur">Éleveur</option>
-            <option value="client">Client (Vendeur/Boucher)</option>
-        </select><br>
-        <button type="submit">S'inscrire</button>
-    </form>
+    <header>
+        <?php include 'menu.php'?>
+    </header>
+    <div class="form">
+        <h2>Inscription</h2>
+        <form method="post">
+            <input type="text" name="nom" placeholder="Nom complet" required><br>
+            <input type="email" name="email" placeholder="Email" required><br>
+            <input type="text" name="telephone" placeholder="Téléphone" required><br>
+            <input type="text" name="adresse" placeholder="Adresse" required><br>
+            <input type="password" name="mot_de_passe" placeholder="Mot de passe" required><br>
+            <select name="type_utilisateur">
+                <option value="eleveur">Éleveur</option>
+                <option value="client">Client (Vendeur/Boucher)</option>
+            </select><br>
+            <button type="submit">S'inscrire</button>
+        </form>
+    </div>
+    
     <p><?= $message ?></p>
 </body>
 </html>

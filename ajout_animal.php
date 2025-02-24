@@ -1,5 +1,5 @@
 <?php
-    include 'menu.php';
+    
 
     if (session_status() === PHP_SESSION_NONE) {
         session_start();
@@ -62,6 +62,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+    <?php include 'menu.php'; ?>
+    </header>
     <h2>Ajouter un animal</h2>
     <form method="post" enctype="multipart/form-data">
         <input type="text" name="type" placeholder="Type d'animal (Ex: Bœuf, Mouton...)" required><br>
